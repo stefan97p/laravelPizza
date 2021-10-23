@@ -22,6 +22,13 @@
             <option value="m">M</option>
             <option value="l">L</option>            
         </select>
+        <fieldset>
+            <label>Extra toppings: </label>
+            <input type="checkbox" name="toppings[]" value="ketchup">Ketchup </br>
+            <input type="checkbox" name="toppings[]" value="cheese">Cheese </br>
+            <input type="checkbox" name="toppings[]" value="pappers">Pappers </br>
+            <input type="checkbox" name="toppings[]" value="olives">Olives </br>           
+        </fieldset>
         <input type="submit" value="Confirm your order">           
     </form>
 </div>

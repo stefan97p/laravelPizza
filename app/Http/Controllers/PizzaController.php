@@ -33,6 +33,7 @@ class PizzaController extends Controller
         $pizza->address = request('address');
         $pizza->type = request('type');
         $pizza->base = request('base');
+        $pizza->toppings = request('toppings');
 
         $pizza->save();
 
