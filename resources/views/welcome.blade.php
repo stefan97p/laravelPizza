@@ -22,7 +22,7 @@
             The right slice at the right price
         </div>
         <p class="mssg">{{ session('mssg') }}</p>
-        <a href="/pizzas/create">Order a pizza</a>
+        <td><button onclick="location.href='{{ url('pizzas/create') }}'" class="order">PIZZA</button></td>
     </div>
 </div>
 @endsection

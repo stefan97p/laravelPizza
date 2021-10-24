@@ -56,7 +56,7 @@ html, body {
     text-transform: uppercase;
     border-bottom: 2px solid;
     padding: 12px 0;
-    color: #5e2195;
+    color: #ff3b3b;
   }
   
   .wrapper{
@@ -70,6 +70,8 @@ html, body {
   .create-pizza{
     background: #f7f7f7;
     padding: 20px;
+    color: #048a09e3;
+    font-weight: bold;
   
     label, select{
       display: block;
@@ -89,7 +91,7 @@ html, body {
     }
   
     input[type=submit]{
-      background: #5e2195;
+      background: #ff3b3b;
       padding: 8px 20px;
       color: #fff;
       border: 0;
@@ -106,14 +108,13 @@ html, body {
   
   .pizza-details{
     background: #f7f7f7;
-    padding: 20px;
-  
+    padding: 20px;  
     p{
       margin: 20px 0;
-      font-weight: bold;
+      font-weight: bold;     
     }
     button{
-      background: #5e2195;
+      background: #ff3b3b;
       padding: 8px 20px;
       color: #fff;
       border: 0;
@@ -124,7 +125,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 30px;
-    color: #5e2195;
+    color: #ff3b3b;
     margin-bottom: 20px;
   }
   
@@ -152,4 +153,24 @@ html, body {
         }
       }
     }
+  }
+
+  .order {
+    display: inline-block;
+    border-radius: 6px;
+    background-color: #ff3b3b;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .order:hover {
+    background-color: #048a09e3;
+    color: white;
   }
