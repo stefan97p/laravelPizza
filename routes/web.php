@@ -17,15 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', 'App\Http\Controllers\PizzaController@index')->middleware('auth');
+Route::get('/pizzas', 'App\Http\Controllers\PizzaController@index')->middleware('auth','isAdmin');
 
-Route::get('/pizzas/create', 'App\Http\Controllers\PizzaController@create');
+Route::get('/pizzas/create', 'App\Http\Controllers\PizzaController@create')->middleware('auth');
     
-Route::post('/pizzas', 'App\Http\Controllers\PizzaController@store');
+Route::post('/pizzas', 'App\Http\Controllers\PizzaController@store')->middleware('auth');
 
-Route::get('/pizzas/{id}', 'App\Http\Controllers\PizzaController@show')->middleware('auth');
+Route::get('/pizzas/{id}', 'App\Http\Controllers\PizzaController@show')->middleware('auth','isAdmin');
 
-Route::delete('/pizzas/{id}', 'App\Http\Controllers\PizzaController@destroy')->middleware('auth');
+Route::delete('/pizzas/{id}', 'App\Http\Controllers\PizzaController@destroy')->middleware('auth','isAdmin');
 
 Auth::routes([
    // 'register' => false
