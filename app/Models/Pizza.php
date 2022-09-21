@@ -11,5 +11,13 @@ class Pizza extends Model
         'toppings' => 'array'
     ];
 
+    protected $fillable = [
+        'type',
+        'base',
+        'name',
+        'address',
+        'toppings',
+    ];
+
     use HasFactory;
 }

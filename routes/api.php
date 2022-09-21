@@ -17,7 +17,8 @@ use App\Http\Controllers\restApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('add', [restApiController::class, 'insert']);
-Route::put('pizza/{id}', 'restApiController@update');
+Route::get('pizzas', [restApiController::class, 'index']);
+Route::get('pizza/{id}', [restApiController::class, 'show']);
+Route::post('add', [restApiController::class, 'store']);
+Route::put('pizza/{id}', [restApiController::class, 'update']);
 Route::delete('pizza/{id}', [restApiController::class, 'destroy']);
