@@ -72,7 +72,58 @@ html, body {
     padding: 20px;
     color: #048a09e3;
     font-weight: bold;
-  
+    
+    
+    .gallery{
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 20px;
+      float: right;       
+    }
+
+    .column {
+      position: relative;
+      height: 200px;
+      width: 200px;
+    }
+
+    .column img{
+      width: 100%;
+      height: 100%;
+        
+    }
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      
+    }
+
+    .column:hover .image {
+      opacity: 0.3;
+    }
+    .column:hover .middle {
+      opacity: 1;
+    }
+    .overlay {
+      background-color: #04AA6D;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px; 
+    } 
+   
+   
     label, select{
       display: block;
     }
@@ -88,6 +139,7 @@ html, body {
   
     input[type=checkbox]{
       margin: 10px;
+      
     }
   
     input[type=submit]{
@@ -96,6 +148,10 @@ html, body {
       color: #fff;
       border: 0;
       margin-top: 20px;
+    }
+    #orderbtn:hover {
+      background-color: #048a09e3;
+      color: white;
     }
 
     fieldset{
@@ -108,7 +164,8 @@ html, body {
   
   .pizza-details{
     background: #f7f7f7;
-    padding: 20px;  
+    padding: 20px;
+      
     p{
       margin: 20px 0;
       font-weight: bold;     
@@ -143,6 +200,7 @@ html, body {
         width: 60px;
         display: inline-block;
       }
+      
       h4{
         display: inline-block;
         font-weight: normal;
